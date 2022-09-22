@@ -1,0 +1,343 @@
+:root {
+    --text-color: rgb(98, 182, 221);
+    --border-color: rgb(84, 132, 172);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("./assets/fonts/Roboto-Regular.ttf")
+}
+
+@font-face {
+    font-family: "roboto-medium";
+    src: url("./assets/fonts/Roboto-Medium.ttf")
+}
+
+@font-face {
+    font-family: "roboto-light";
+    src: url("./assets/fonts/Roboto-Light.ttf")
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url("./assets/fonts/Roboto-Bold.ttf")
+}
+
+*{
+    box-sizing: border-box;
+    color: #8892b0;
+    font-family: "roboto";
+    margin: 0;
+}
+
+body {
+    background: #0a192f; 
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p,li {
+    line-height: 1.5;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 10%;
+}
+
+section div:first-child {
+    width: 60%;
+}
+
+#header {
+    background-color: rgba(0, 0, 0, 0.13);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    width: 100%;
+}
+
+#icon-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    color: red
+}
+
+.icon {
+    font-size: 30px !important;
+    margin-left: 30px;
+    color: #8892b0;
+}
+
+.icon:hover {
+    color: #fff
+}
+
+#about, #experience, #education {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#menu-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu {
+    display: flex;
+    margin-right: 20px;
+}
+
+#menu-drawer-icon {
+    display: none;
+}
+
+#menu div a, #menu-drawer div a{
+    cursor: pointer;
+    font-family: "roboto-medium";
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 15px 10px 15px;
+}
+
+#menu div a:hover {
+    color: #fff;
+}
+
+#menu-resume a {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+#menu-resume a:hover {
+    color: rgb(113, 210, 255) !important;
+    border-color: rgb(89, 151, 202)
+}
+
+#home {
+    height: 100vh;
+}
+
+#home-intro {
+    color: var(--text-color);
+    font-family: "roboto-medium";
+    line-height: 1;
+}
+
+#home-name {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: "roboto";
+    color: rgb(211, 206, 206);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+#home-tagline {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: "roboto";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+#home-description {
+    width: 50%;
+}
+
+.heading {
+    font-size: 30px;
+    color: rgb(211, 206, 206);
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--text-color);
+}
+
+.sub-heading {
+    margin-bottom: 8px;
+    color: rgb(211, 206, 206);
+}
+
+#duration {
+    font-size: 12px;
+    font-family: "roboto-medium";
+    margin-bottom: 5px;
+    color:#8892b0
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-image-container, .profile-image-container-top {
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.profile-image-container-top {
+    display: none;
+}
+
+.profile-image {
+    align-self: flex-end;
+    height: auto;
+    width: 200px;
+    margin-left: auto;
+}
+
+#side-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 415px) {
+    * {
+        font-size: 12px
+    }
+
+    section div:first-child {
+        width: 80%
+    }
+
+    #icon-container {
+        margin-left: 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menu-drawer-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu-drawer-icon div{
+        height: 2px;
+        margin: 5px;
+        margin-right: 15px;
+        background-color: var(--border-color);
+        align-self: flex-end;
+    }
+
+    .top-drawer {
+        width: 40px
+    }
+
+    .middle-drawer {
+        width: 30px
+    }
+
+    .bottom-drawer {
+        width: 20px
+    }
+
+    #home-intro {
+        font-size: 15px;
+    }
+
+    #home-name, #home-tagline {
+        font-size: 35px;
+    }
+
+    #home-description {
+        width: 90%;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .profile-image-container {
+        display: none;
+    }
+
+    .profile-image-container-top {
+        width: 100%;
+        display: block;
+    }
+
+    .profile-image {
+        width: 120px !important;
+        margin-left: 10px;
+    }
+
+    #menu-drawer div a{
+        font-size: 20px;
+    }
+
+    #side-menu {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        background-color: #0c47a0d0;
+
+        position: fixed;
+        right: -100%;
+        top: 0;
+        transition: 0.3s;
+    }
+    
+    #menu-drawer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #side-menu.active {
+        right: 0;
+    }
+    
+    #menu-drawer div:first-child {
+        width: auto;
+    }
+    
+    #menu-drawer div {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        align-self: flex-end;
+    }
+    
+    #menu-drawer div a {
+        margin: 0;
+        padding-right: 0;
+    }
+    
+    #menu-drawer #menu-resume a {
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    *{
+        font-size: 14px;
+    }
+
+    .profile-image {
+        width: 170px;
+        margin-left: 5px;
+    }
+}
