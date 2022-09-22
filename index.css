@@ -217,6 +217,12 @@ section div:first-child {
     * {
         font-size: 12px
     }
+}
+
+@media only screen and (max-width: 770px) {
+    *{
+        font-size: 14px;
+    }
 
     section div:first-child {
         width: 80%
@@ -328,16 +334,5 @@ section div:first-child {
     
     #menu-drawer #menu-resume a {
         padding-right: 15px;
-    }
-}
-
-@media only screen and (max-width: 770px) {
-    *{
-        font-size: 14px;
-    }
-
-    .profile-image {
-        width: 170px;
-        margin-left: 5px;
     }
 }
