@@ -289,24 +289,44 @@ section div:first-child {
 
     #menu-drawer div a{
         font-size: 20px;
+        color: rgb(211, 206, 206);
+    }
+
+    #menu-drawer #menu-resume a{
+        color: var(--text-color);
     }
 
     #side-menu {
         display: flex;
+        flex-direction: row;
         height: 100vh;
         width: 100%;
-        background-color: #0c47a0d0;
 
         position: fixed;
         right: -100%;
         top: 0;
         transition: 0.3s;
     }
+
+    #empty-container{
+        height: 100%;
+        width: 60%;
+
+        transition: 0.7s;
+    }
+
+    .active-color-change{
+        background-color: #1b3b6b4d;
+    }
     
     #menu-drawer {
+        align-self: flex-end;
         height: 100%;
+        width: 40%;
         display: flex;
         flex-direction: column;
+        background-color: #0a192fad;  
+        /* #022964d0; */
     }
 
     #side-menu.active {
@@ -318,8 +338,7 @@ section div:first-child {
     }
     
     #menu-drawer div {
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin: 30px 25px 30px 0;
         align-self: flex-end;
     }
     
@@ -330,5 +349,9 @@ section div:first-child {
     
     #menu-drawer #menu-resume a {
         padding-right: 15px;
+    }
+
+    .disable-scroll{
+        overflow: hidden;
     }
 }
